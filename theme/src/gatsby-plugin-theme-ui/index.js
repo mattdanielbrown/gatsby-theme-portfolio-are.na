@@ -30,23 +30,11 @@ export default {
       lineHeight: "text",
     },
     Header: {
-      backgroundColor: "primary",
-      color: "background",
-      fontWeight: "bold",
-      margin: 0,
-      span: {
-        display: "block",
-        fontSize: 3,
-        margin: "0 auto",
-        maxWidth: "container",
-        padding: 3,
-        width: "90vw",
-      },
+      paddingTop: 3,
+      marginBottom: 5,
     },
     Main: {
-      margin: "0 auto",
-      maxWidth: "container",
-      width: "90vw",
+      marginBottom: 4,
     },
     Container: {
       padding: 0,

@@ -5,5 +5,8 @@
  */
 
 module.exports = {
-  plugins: ["gatsby-theme-jam-example"],
+  siteMetadata: {
+    title: "Gatsby + Are.na",
+  },
+  plugins: ["gatsby-theme-portfolio-are.na"],
 }

@@ -1,21 +1,37 @@
-exports.createPages = ({ actions, reporter }) => {
-  reporter.warn("make sure to load data from somewhere!")
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
 
-  // TODO replace this with data from somewhere
-  actions.createPage({
-    path: "/",
-    component: require.resolve("./src/templates/page.js"),
-    context: {
-      heading: "Your Theme Here",
-      content: `
-        <p>
-          Use this handy theme example as the basis for your own amazing theme!
-        </p>
-        <p>
-          For more information, see 
-          <a href="https://themejam.gatsbyjs.org">themejam.gatsbyjs.org</a>.
-        </p>
-      `,
-    },
+  const projectTemplate = require.resolve(`./src/templates/project.js`)
+
+  return graphql(`
+    {
+      allArenaChannel {
+        edges {
+          node {
+            children {
+              __typename
+              ... on ArenaInnerChannel {
+                slug
+              }
+            }
+          }
+        }
+      }
+    }
+  `).then(result => {
+    // Create all the pages
+    result.data.allArenaChannel.edges.forEach(edge => {
+      edge.node.children
+        .filter(item => item.__typename === "ArenaInnerChannel")
+        .forEach(child => {
+          createPage({
+            path: `${child.slug}`,
+            component: projectTemplate,
+            context: {
+              slug: child.slug,
+            },
+          })
+        })
+    })
   })
 }
