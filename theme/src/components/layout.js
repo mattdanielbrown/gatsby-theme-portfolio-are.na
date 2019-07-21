@@ -1,9 +1,9 @@
 import React from "react"
-import { css, Global } from "@emotion/core"
+import { Global } from "@emotion/core"
 import { Layout as StyledLayout, Header, Main, Container } from "theme-ui"
 import { graphql, useStaticQuery, Link } from "gatsby"
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -14,15 +14,15 @@ const Layout = ({ children }) => {
     }
   `)
 
-  console.log(data)
   return (
     <StyledLayout>
       <Global
-        styles={css`
-          body {
-            margin: 0;
-          }
-        `}
+        styles={{
+          "html, body": {
+            margin: 0,
+            padding: 0,
+          },
+        }}
       />
       <Container>
         <Header>
@@ -33,5 +33,3 @@ const Layout = ({ children }) => {
     </StyledLayout>
   )
 }
-
-export default Layout

@@ -1,9 +1,9 @@
 /** @jsx jsx **/
 import { jsx, Styled } from "theme-ui"
-import { StaticQuery, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Link from "gatsby-link"
 import Img from "gatsby-image"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 
 export default function HomePage(props) {
   const data = useStaticQuery(graphql`

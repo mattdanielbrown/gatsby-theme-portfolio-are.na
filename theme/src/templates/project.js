@@ -1,7 +1,7 @@
 /** @jsx jsx **/
 import { jsx, Styled } from "theme-ui"
 import Img from "gatsby-image"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 
 export default function ProjectTemplate(props) {
