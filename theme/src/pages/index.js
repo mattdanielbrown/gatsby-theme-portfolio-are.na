@@ -8,6 +8,11 @@ import Layout from "../components/Layout"
 export default function HomePage(props) {
   const data = useStaticQuery(graphql`
     query {
+      site {
+        siteMetadata {
+          description
+        }
+      }
       arenaChannel(slug: { eq: "gatsby-source-arena-portfolio" }) {
         children {
           __typename
@@ -38,6 +43,7 @@ export default function HomePage(props) {
 
   return (
     <Layout>
+      <Styled.h1>{data.site.siteMetadata.description}</Styled.h1>
       <div sx={{ display: "grid", gridAutoFlow: "row", gridGap: 4 }}>
         {data.arenaChannel.children
           .filter(item => item.__typename === "ArenaInnerChannel")

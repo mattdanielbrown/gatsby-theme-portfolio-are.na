@@ -6,7 +6,9 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby + Are.na",
+    title: "gatsby-theme-portfolio-are.na",
+    description:
+      "This is a cool example of using are.na as a CMS for your portfolio. Need to update this.",
   },
   plugins: ["gatsby-theme-portfolio-are.na"],
 }

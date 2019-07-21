@@ -4,10 +4,16 @@
  * @see https://theme-ui.com/gatsby-plugin/
  */
 export default {
+  initialColorMode: "dark",
   colors: {
-    text: "#232129",
+    text: "#000",
     background: "#fff",
-    primary: "#639",
+    modes: {
+      dark: {
+        text: "#fff",
+        background: "#000",
+      },
+    },
   },
   fonts: {
     default:
@@ -15,8 +21,8 @@ export default {
   },
   fontSizes: [16, 18, 20, 22, 27, 36],
   lineHeights: {
-    text: "1.45",
-    heading: "1.1",
+    text: "1.4",
+    heading: "1.2",
   },
   sizes: {
     container: 650,
@@ -31,7 +37,6 @@ export default {
     },
     Header: {
       paddingTop: 3,
-      marginBottom: 5,
     },
     Main: {
       marginBottom: 4,
@@ -42,9 +47,9 @@ export default {
       paddingTop: 3,
     },
     h1: {
-      color: "text",
       fontSize: 5,
-      lineHeight: "heading",
+      py: 5,
+      m: 0,
     },
   },
 }

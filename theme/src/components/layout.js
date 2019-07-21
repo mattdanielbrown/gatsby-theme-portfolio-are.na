@@ -1,19 +1,9 @@
 import React from "react"
 import { Global } from "@emotion/core"
-import { Layout as StyledLayout, Header, Main, Container } from "theme-ui"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { Layout as StyledLayout, Main, Container } from "theme-ui"
+import Header from "./Header"
 
 export default function Layout({ children }) {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <StyledLayout>
       <Global
@@ -25,9 +15,7 @@ export default function Layout({ children }) {
         }}
       />
       <Container>
-        <Header>
-          <Link to="/">{data.site.siteMetadata.title}</Link>
-        </Header>
+        <Header />
         <Main>{children}</Main>
       </Container>
     </StyledLayout>
