@@ -6,8 +6,9 @@ A Gatsby theme for creating a portfolio with [are.na](https://are.na/)
 
 ## Features
 
-- Theme UI for styling
+- [Theme UI](https://theme-ui.com) for styling
 - MDX for static pages (`/about`, `/contact`) etc
+- [React Spring](https://github.com/react-spring/react-spring) for simple page transitions
 
 * [https://www.npmjs.com/package/gatsby-source-are.na](gatsby-source-are.na)
 *
