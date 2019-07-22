@@ -14,10 +14,7 @@ export default function ProjectTemplate(props) {
   return (
     <Layout>
       <SEO title={title} description={description} />
-      <PageTitle>
-        <Styled.h1 sx={{ m: 0 }}>{title}</Styled.h1>
-        <Styled.p>{description}</Styled.p>
-      </PageTitle>
+      <PageTitle title={title} description={description} />
       <PageBody>
         <section sx={{ display: "grid", gridAutoFlow: "row", gridGap: 4 }}>
           {children

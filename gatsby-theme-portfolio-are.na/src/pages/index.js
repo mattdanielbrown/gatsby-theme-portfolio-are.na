@@ -47,12 +47,8 @@ export default function HomePage(props) {
   return (
     <Layout>
       <SEO title="Home" description={description} />
-      {description && (
-        <PageTitle>
-          <Styled.h1 sx={{ m: 0 }}>{description}</Styled.h1>
-        </PageTitle>
-      )}
-      <PageBody sx={{ display: "grid", gridAutoFlow: "row", gridGap: 4 }}>
+      {description && <PageTitle title={description} />}
+      <PageBody sx={{ display: "grid", gridAutoFlow: "row", gridGap: 5 }}>
         {data.arenaChannel.children
           .filter(item => item.__typename === "ArenaInnerChannel")
           .map((item, index) => {
@@ -65,10 +61,15 @@ export default function HomePage(props) {
                     )}
                   </Link>
                 ))}
-                <Styled.h3>
-                  <Link to={`/${item.slug}`}>{item.title}</Link>
+                <Styled.h3 sx={{ mb: 1 }}>
+                  <Link
+                    sx={{ color: "primary", textDecoration: "none" }}
+                    to={`/${item.slug}`}
+                  >
+                    {item.title}
+                  </Link>
                 </Styled.h3>
-                <Styled.p>{item.metadata.description}</Styled.p>
+                <Styled.p sx={{ mt: 0 }}>{item.metadata.description}</Styled.p>
               </article>
             )
           })}
