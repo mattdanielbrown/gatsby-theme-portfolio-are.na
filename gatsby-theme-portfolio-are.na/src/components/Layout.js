@@ -1,12 +1,11 @@
 /** @jsx jsx **/
-import { jsx, Styled, Root, Main, Footer, Container } from "theme-ui"
+import { jsx, Styled, Main, Container } from "theme-ui"
 import { Global } from "@emotion/core"
 import { useSpring, animated } from "react-spring"
 
 import Header from "./Header"
+import Footer from "./Footer"
 import SEO from "./SEO"
-
-console.log(Root)
 
 export default function Layout({ children, pageContext }) {
   return (
@@ -19,12 +18,17 @@ export default function Layout({ children, pageContext }) {
           },
         }}
       />
-      {pageContext && pageContext.frontmatter && (
-        <SEO {...pageContext.frontmatter} />
-      )}
       <Container>
         <Header />
-        <Main>{children}</Main>
+        <Main>
+          {pageContext && pageContext.frontmatter && (
+            <div>
+              <PageTitle title={pageContext.frontmatter.title} />
+              <SEO {...pageContext.frontmatter} />
+            </div>
+          )}
+          {children}
+        </Main>
         <Footer sx={{ py: 5 }}>Hello</Footer>
       </Container>
     </Styled.root>

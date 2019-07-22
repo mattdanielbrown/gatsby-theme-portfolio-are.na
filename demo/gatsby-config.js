@@ -13,6 +13,8 @@ module.exports = {
     image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@jordanoverbye",
     description: "A Gatsby theme for creating a portfolio with are.na",
+    copyright: "Lorem Ipsum Dolar",
+    socials: ["facebook", "github", "twitter"],
   },
   plugins: ["gatsby-theme-portfolio-are.na"],
 }

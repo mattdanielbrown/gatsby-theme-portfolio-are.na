@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import Layout, { PageTitle, PageBody } from "../components/Layout"
 import SEO from "../components/SEO"
 import { graphql } from "gatsby"
+import ProjectsGrid from "../components/ProjectsGrid"
 
 export default function ProjectTemplate(props) {
   const {
@@ -26,6 +27,10 @@ export default function ProjectTemplate(props) {
                 </div>
               )
             })}
+        </section>
+        <section sx={{ py: 6 }}>
+          <Styled.h3 sx={{ fontSize: 5 }}>All projects</Styled.h3>
+          <ProjectsGrid />
         </section>
       </PageBody>
     </Layout>
