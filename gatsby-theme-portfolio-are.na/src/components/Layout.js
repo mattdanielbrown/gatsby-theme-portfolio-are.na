@@ -1,9 +1,10 @@
 import React from "react"
 import { Global } from "@emotion/core"
-import { Layout as StyledLayout, Main, Container } from "theme-ui"
+import { Layout as StyledLayout, Main, Footer, Container } from "theme-ui"
 import Header from "./Header"
+import SEO from "./SEO"
 
-export default function Layout({ children }) {
+export default function Layout({ children, pageContext }) {
   return (
     <StyledLayout>
       <Global
@@ -14,9 +15,13 @@ export default function Layout({ children }) {
           },
         }}
       />
+      {pageContext && pageContext.frontmatter && (
+        <SEO {...pageContext.frontmatter} />
+      )}
       <Container>
         <Header />
         <Main>{children}</Main>
+        <Footer>Hello</Footer>
       </Container>
     </StyledLayout>
   )

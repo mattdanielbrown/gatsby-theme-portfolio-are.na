@@ -14,9 +14,17 @@ module.exports = {
       },
     },
     "gatsby-plugin-theme-ui",
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve(`./src/components/Layout.js`),
+        },
+      },
+    },
     {
       resolve: "gatsby-plugin-page-creator",
       options: {

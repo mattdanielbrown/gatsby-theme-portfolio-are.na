@@ -2,6 +2,7 @@
 import { jsx, Styled } from "theme-ui"
 import Img from "gatsby-image"
 import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 import { graphql } from "gatsby"
 
 export default function ProjectTemplate(props) {
@@ -12,6 +13,7 @@ export default function ProjectTemplate(props) {
   } = props.data.arenaInnerChannel
   return (
     <Layout>
+      <SEO title={title} description={description} />
       <Styled.h1>{title}</Styled.h1>
       <Styled.p>{description}</Styled.p>
       <section sx={{ display: "grid", gridAutoFlow: "row", gridGap: 4 }}>

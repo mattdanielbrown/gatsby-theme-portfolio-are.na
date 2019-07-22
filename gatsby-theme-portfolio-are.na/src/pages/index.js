@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Link from "gatsby-link"
 import Img from "gatsby-image"
 import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 export default function HomePage(props) {
   const data = useStaticQuery(graphql`
@@ -43,6 +44,7 @@ export default function HomePage(props) {
 
   return (
     <Layout>
+      <SEO title="Home" />
       <Styled.h1>{data.site.siteMetadata.description}</Styled.h1>
       <div sx={{ display: "grid", gridAutoFlow: "row", gridGap: 4 }}>
         {data.arenaChannel.children
