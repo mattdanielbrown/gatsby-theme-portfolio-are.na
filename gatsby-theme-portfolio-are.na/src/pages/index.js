@@ -3,7 +3,7 @@ import { jsx, Styled } from "theme-ui"
 import { graphql, useStaticQuery } from "gatsby"
 import Link from "gatsby-link"
 import Img from "gatsby-image"
-import Layout from "../components/Layout"
+import Layout, { PageTitle, PageBody } from "../components/Layout"
 import SEO from "../components/SEO"
 
 export default function HomePage(props) {
@@ -42,11 +42,17 @@ export default function HomePage(props) {
     }
   `)
 
+  const { description } = data.site.siteMetadata
+
   return (
     <Layout>
-      <SEO title="Home" />
-      <Styled.h1>{data.site.siteMetadata.description}</Styled.h1>
-      <div sx={{ display: "grid", gridAutoFlow: "row", gridGap: 4 }}>
+      <SEO title="Home" description={description} />
+      {description && (
+        <PageTitle>
+          <Styled.h1 sx={{ m: 0 }}>{description}</Styled.h1>
+        </PageTitle>
+      )}
+      <PageBody sx={{ display: "grid", gridAutoFlow: "row", gridGap: 4 }}>
         {data.arenaChannel.children
           .filter(item => item.__typename === "ArenaInnerChannel")
           .map((item, index) => {
@@ -66,7 +72,7 @@ export default function HomePage(props) {
               </article>
             )
           })}
-      </div>
+      </PageBody>
     </Layout>
   )
 }

@@ -48,8 +48,6 @@ export default {
     },
     h1: {
       fontSize: 5,
-      py: 5,
-      m: 0,
     },
   },
 }

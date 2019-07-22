@@ -1,7 +1,7 @@
 /** @jsx jsx **/
 import { jsx, Styled } from "theme-ui"
 import Img from "gatsby-image"
-import Layout from "../components/Layout"
+import Layout, { PageTitle, PageBody } from "../components/Layout"
 import SEO from "../components/SEO"
 import { graphql } from "gatsby"
 
@@ -14,19 +14,23 @@ export default function ProjectTemplate(props) {
   return (
     <Layout>
       <SEO title={title} description={description} />
-      <Styled.h1>{title}</Styled.h1>
-      <Styled.p>{description}</Styled.p>
-      <section sx={{ display: "grid", gridAutoFlow: "row", gridGap: 4 }}>
-        {children
-          .filter(item => item.__typename === "ArenaBlock")
-          .map((item, index) => {
-            return (
-              <div className="margin-bottom-s" key={index}>
-                <Img fluid={item.image.childImageSharp.fluid} />
-              </div>
-            )
-          })}
-      </section>
+      <PageTitle>
+        <Styled.h1 sx={{ m: 0 }}>{title}</Styled.h1>
+        <Styled.p>{description}</Styled.p>
+      </PageTitle>
+      <PageBody>
+        <section sx={{ display: "grid", gridAutoFlow: "row", gridGap: 4 }}>
+          {children
+            .filter(item => item.__typename === "ArenaBlock")
+            .map((item, index) => {
+              return (
+                <div className="margin-bottom-s" key={index}>
+                  <Img fluid={item.image.childImageSharp.fluid} />
+                </div>
+              )
+            })}
+        </section>
+      </PageBody>
     </Layout>
   )
 }
