@@ -1,8 +1,8 @@
 # Gatsby Theme Portfolio Are.na
 
-## [Demo](gatsby-theme-portfolio-arena.netlify.com)
-
 A Gatsby theme for creating a portfolio with [are.na](https://are.na/)
+
+[Demo](https://gatsby-theme-portfolio-arena.netlify.com/)
 
 ## Features
 
