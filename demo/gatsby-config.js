@@ -15,7 +15,7 @@ module.exports = {
 
     indexTitle: "A Gatsby theme for creating a portfolio with are.na",
     indexDescription: "Are.na + Theme UI + MDX",
-    description: "Are.na + Theme UI + MDX",
+    description: "Gatsby + Are.na + Theme UI + MDX",
 
     social: [
       {
