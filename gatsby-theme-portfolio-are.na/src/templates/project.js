@@ -28,7 +28,7 @@ export default function ProjectTemplate(props) {
               )
             })}
         </section>
-        <section sx={{ py: 6 }}>
+        <section sx={{ py: 5 }}>
           <Styled.h3 sx={{ fontSize: 5 }}>All projects</Styled.h3>
           <ProjectsGrid />
         </section>

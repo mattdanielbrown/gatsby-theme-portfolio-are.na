@@ -12,23 +12,27 @@ export default function ProjectsGrid() {
           description
         }
       }
-      arenaChannel(slug: { eq: "gatsby-source-arena-portfolio" }) {
-        children {
-          __typename
-          ... on ArenaInnerChannel {
-            title
-            slug
-            metadata {
-              description
-            }
+      allArenaChannel {
+        edges {
+          node {
             children {
               __typename
-              ... on ArenaBlock {
+              ... on ArenaInnerChannel {
                 title
-                image {
-                  childImageSharp {
-                    fluid(maxWidth: 1280) {
-                      ...GatsbyImageSharpFluid_noBase64
+                slug
+                metadata {
+                  description
+                }
+                children {
+                  __typename
+                  ... on ArenaBlock {
+                    title
+                    image {
+                      childImageSharp {
+                        fluid(maxWidth: 1280) {
+                          ...GatsbyImageSharpFluid_noBase64
+                        }
+                      }
                     }
                   }
                 }
@@ -40,7 +44,7 @@ export default function ProjectsGrid() {
     }
   `)
 
-  const projects = data.arenaChannel.children.filter(
+  const projects = data.allArenaChannel.edges[0].node.children.filter(
     item => item.__typename === "ArenaInnerChannel"
   )
 

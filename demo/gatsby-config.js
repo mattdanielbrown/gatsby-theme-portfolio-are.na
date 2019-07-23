@@ -13,8 +13,40 @@ module.exports = {
     image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@jordanoverbye",
     description: "A Gatsby theme for creating a portfolio with are.na",
-    copyright: "Lorem Ipsum Dolar",
-    socials: ["facebook", "github", "twitter"],
+    social: [
+      {
+        name: "Github",
+        url: "https://github.com",
+      },
+
+      {
+        name: "Twitter",
+        url: "https://twitter.com",
+      },
+      {
+        name: "Are.na",
+        url: "https://are.na",
+      },
+    ],
+    navItems: [
+      {
+        name: "About",
+        slug: "/about",
+      },
+      {
+        name: "Contact",
+        slug: "/contact",
+      },
+    ],
   },
-  plugins: ["gatsby-theme-portfolio-are.na"],
+  plugins: [
+    {
+      resolve: "gatsby-theme-portfolio-are.na",
+      options: {
+        accessToken:
+          "2db187bcb9fe61545222381128aba06a72dfcf73a62c291e835f8e344c1d3881",
+        channelSlug: ["gatsby-source-arena-portfolio"],
+      },
+    },
+  ],
 }

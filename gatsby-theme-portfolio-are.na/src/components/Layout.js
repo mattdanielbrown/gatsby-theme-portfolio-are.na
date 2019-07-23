@@ -18,9 +18,9 @@ export default function Layout({ children, pageContext }) {
           },
         }}
       />
-      <Container>
-        <Header />
-        <Main>
+      <Header />
+      <Main>
+        <Container sx={{ py: 0 }}>
           {pageContext && pageContext.frontmatter && (
             <div>
               <PageTitle title={pageContext.frontmatter.title} />
@@ -28,9 +28,9 @@ export default function Layout({ children, pageContext }) {
             </div>
           )}
           {children}
-        </Main>
-        <Footer sx={{ py: 5 }}>Hello</Footer>
-      </Container>
+        </Container>
+      </Main>
+      <Footer sx={{ py: 5 }}>Hello</Footer>
     </Styled.root>
   )
 }
@@ -45,7 +45,7 @@ export function PageTitle({ title, description, ...rest }) {
     <animated.div
       style={animatedProps}
       {...rest}
-      sx={{ maxWidth: "66%", py: 5 }}
+      sx={{ maxWidth: "50%", py: 5 }}
     >
       {title && <Styled.h1 sx={{ m: 0 }}>{title}</Styled.h1>}
       {description && <Styled.p sx={{ fontSize: 3 }}>{description}</Styled.p>}

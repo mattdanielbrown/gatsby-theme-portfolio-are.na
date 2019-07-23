@@ -1,5 +1,5 @@
 /** @jsx jsx **/
-import { jsx, Footer as ThemedFooter, Styled } from "theme-ui"
+import { jsx, Footer as ThemedFooter, Styled, Container } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
 
 export default function Footer() {
@@ -7,37 +7,44 @@ export default function Footer() {
     query {
       site {
         siteMetadata {
-          socials
+          social {
+            name
+            url
+          }
         }
       }
     }
   `)
-
   return (
-    <ThemedFooter
-      sx={{
-        display: "flex",
-        justifyContent: "space-between",
-        py: 4,
-        mt: 4,
-      }}
-    >
-      <ul
+    <ThemedFooter>
+      <Container
         sx={{
-          margin: 0,
-          padding: 0,
-          listStyle: "none",
-          display: "grid",
-          gridAutoFlow: "column",
-          gridGap: 3,
+          display: "flex",
+          justifyContent: "space-between",
         }}
       >
-        {data.site.siteMetadata.socials.map(social => (
-          <li key={social}>
-            <Styled.a href="#">{social}</Styled.a>
-          </li>
-        ))}
-      </ul>
+        <nav>
+          <ul
+            sx={{
+              margin: 0,
+              padding: 0,
+              listStyle: "none",
+              display: "grid",
+              gridAutoFlow: "column",
+              gridGap: 3,
+            }}
+          >
+            {data.site.siteMetadata.social.map(({ url, name }, index) => (
+              <li key={index}>
+                <Styled.a href={url} target="_blank" rel="noopener">
+                  {name}
+                </Styled.a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <span>&copy; {new Date().getFullYear()}</span>
+      </Container>
     </ThemedFooter>
   )
 }

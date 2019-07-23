@@ -45,8 +45,8 @@ export default {
     heading: "700",
   },
   lineHeights: {
-    body: 1.5,
-    heading: 1.25,
+    body: 1.4,
+    heading: 1.1,
   },
   textStyles: {
     heading,
@@ -58,8 +58,16 @@ export default {
   },
   styles: {
     Container: {
-      p: 3,
-      maxWidth: 1024,
+      px: 4,
+      py: 0,
+      maxWidth: 1280,
+    },
+    Header: {
+      pt: 3,
+    },
+    Footer: {
+      py: 4,
+      mt: 4,
     },
     root: {
       fontFamily: "body",
@@ -91,7 +99,7 @@ export default {
     },
     a: {
       color: "primary",
-      "&:hover": {
+      "&:hover, &:focus": {
         color: "secondary",
       },
     },
@@ -117,78 +125,10 @@ export default {
       color: "secondary",
       bg: "muted",
     },
-    table: {
-      width: "100%",
-      my: 4,
-      borderCollapse: "separate",
-      borderSpacing: 0,
-      [["th", "td"]]: {
-        textAlign: "left",
-        py: "4px",
-        pr: "4px",
-        pl: 0,
-        borderColor: "muted",
-        borderBottomStyle: "solid",
-      },
-    },
-    th: {
-      verticalAlign: "bottom",
-      borderBottomWidth: "2px",
-    },
-    td: {
-      verticalAlign: "top",
-      borderBottomWidth: "1px",
-    },
     hr: {
       border: 0,
       borderBottom: "1px solid",
       borderColor: "muted",
-    },
-  },
-  prism: {
-    [[
-      ".comment",
-      ".prolog",
-      ".doctype",
-      ".cdata",
-      ".punctuation",
-      ".operator",
-      ".entity",
-      ".url",
-    ]]: {
-      color: "gray",
-    },
-    ".comment": {
-      fontStyle: "italic",
-    },
-    [[
-      ".property",
-      ".tag",
-      ".boolean",
-      ".number",
-      ".constant",
-      ".symbol",
-      ".deleted",
-      ".function",
-      ".class-name",
-      ".regex",
-      ".important",
-      ".variable",
-    ]]: {
-      color: "purple",
-    },
-    [[".atrule", ".attr-value", ".keyword"]]: {
-      color: "primary",
-    },
-    [[
-      ".selector",
-      ".attr-name",
-      ".string",
-      ".char",
-      ".builtin",
-      ".inserted",
-    ]]: {
-      color: "secondary",
     },
   },
 }
