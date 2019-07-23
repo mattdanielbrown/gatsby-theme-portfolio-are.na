@@ -2,7 +2,7 @@
 
 A Gatsby theme for creating a portfolio with [are.na](https://are.na/)
 
-[Demo](https://gatsby-theme-portfolio-arena.netlify.com/)
+**[Demo](https://gatsby-theme-portfolio-arena.netlify.com/)**
 
 ## Features
 
