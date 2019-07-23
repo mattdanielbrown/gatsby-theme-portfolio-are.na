@@ -11,7 +11,7 @@ const heading = {
 
 export default {
   useCustomProperties: true,
-  initialColorMode: "light",
+  initialColorMode: "dark",
   colors: {
     text: "#000",
     background: "#fff",
