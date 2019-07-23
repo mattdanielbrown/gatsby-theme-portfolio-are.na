@@ -4,7 +4,6 @@ module.exports = ({ accessToken, channelSlug }) => {
   return {
     siteMetadata: {
       title: "gatsby-theme-portfolio-are.na",
-      channelSlug,
     },
     plugins: [
       {
