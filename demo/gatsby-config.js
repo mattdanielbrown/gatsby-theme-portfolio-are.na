@@ -30,10 +30,6 @@ module.exports = {
     ],
     navItems: [
       {
-        name: "About",
-        slug: "/about",
-      },
-      {
         name: "Contact",
         slug: "/contact",
       },
