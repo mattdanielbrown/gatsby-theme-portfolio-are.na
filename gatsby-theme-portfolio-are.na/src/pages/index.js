@@ -12,18 +12,21 @@ export default function HomePage(props) {
     query {
       site {
         siteMetadata {
-          description
+          indexTitle
+          indexDescription
         }
       }
     }
   `)
 
-  const { description } = data.site.siteMetadata
+  const { indexTitle, indexDescription } = data.site.siteMetadata
 
   return (
     <Layout>
-      <SEO title="Home" description={description} />
-      {description && <PageTitle title={description} />}
+      <SEO description={indexTitle} />
+      {indexDescription && (
+        <PageTitle title={indexTitle} description={indexDescription} />
+      )}
       <ProjectsGrid />
     </Layout>
   )

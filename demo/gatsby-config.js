@@ -12,7 +12,11 @@ module.exports = {
     url: "https://www.doe.com", // No trailing slash allowed!
     image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@jordanoverbye",
-    description: "A Gatsby theme for creating a portfolio with are.na",
+
+    indexTitle: "A Gatsby theme for creating a portfolio with are.na",
+    indexDescription: "Are.na + Theme UI + MDX",
+    description: "Are.na + Theme UI + MDX",
+
     social: [
       {
         name: "Github",
