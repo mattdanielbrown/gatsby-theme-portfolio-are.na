@@ -14,7 +14,7 @@ module.exports = {
     twitterUsername: "@jordanoverbye",
 
     indexTitle: "A Gatsby theme for creating a portfolio with are.na",
-    indexDescription: "Are.na + Theme UI + MDX",
+    indexDescription: "Gatsby + Are.na + Theme UI + MDX",
     description: "Gatsby + Are.na + Theme UI + MDX",
 
     social: [
