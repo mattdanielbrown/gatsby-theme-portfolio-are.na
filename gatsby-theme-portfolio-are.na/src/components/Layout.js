@@ -4,7 +4,7 @@ import { Global } from '@emotion/core'
 
 import Header from './Header'
 import Footer from './Footer'
-import SEO from './SEO'
+// import SEO from './SEO'
 import AnimatedContent from './AnimatedContent'
 import PageTitle from './PageTitle'
 
@@ -27,7 +27,7 @@ export default function Layout(props) {
           },
         }}
       />
-      <SEO title={title} description={description} />
+      {/* <SEO title={title} description={description} /> */}
       <Header />
       <Main>
         <Container>

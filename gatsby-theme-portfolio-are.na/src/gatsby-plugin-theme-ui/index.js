@@ -3,6 +3,7 @@
  * @see https://theme-ui.com/
  * @see https://theme-ui.com/gatsby-plugin/
  */
+
 const heading = {
   fontFamily: 'heading',
   fontWeight: 'heading',
