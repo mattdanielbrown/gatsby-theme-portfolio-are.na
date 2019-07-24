@@ -7,11 +7,6 @@ import ProjectsGridItem from './ProjectsGridItem'
 export default function ProjectsGrid() {
   const data = useStaticQuery(graphql`
     query {
-      site {
-        siteMetadata {
-          description
-        }
-      }
       allArenaChannel {
         edges {
           node {
