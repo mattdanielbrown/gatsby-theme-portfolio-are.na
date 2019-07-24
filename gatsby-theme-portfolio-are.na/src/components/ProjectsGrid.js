@@ -24,7 +24,7 @@ export default function ProjectsGrid() {
                     title
                     image {
                       childImageSharp {
-                        fluid(maxWidth: 1280) {
+                        fluid(maxWidth: 800, maxHeight: 530) {
                           ...GatsbyImageSharpFluid_noBase64
                         }
                       }
