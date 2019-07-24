@@ -18,7 +18,25 @@ A Gatsby theme for creating a portfolio with [are.na](https://are.na/)
 
 You will first need to generate an access token from [dev.are.na](https://dev.are.na/).
 
-### 2. Edit your `gatsby-config.js`
+### 2. Make your are.na channel
+
+You will need to create a **single** are.na channel which contains all projects as "inner" channels. You will then pass the slug of this single are.na channel to plugin config (details in the next step).
+
+Example
+
+```
+my-awesome-arena-channel
+  inner-channel-1
+    image-1
+    image-2
+    ...
+  inner-channel-2
+    image-3
+    image-4
+    ...
+```
+
+### 3. Edit your `gatsby-config.js`
 
 Add `gatsby-theme-portfolio-are.na` to your `plugins` in `gatsby-config.js`.
 
