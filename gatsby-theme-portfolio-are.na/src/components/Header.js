@@ -46,7 +46,7 @@ export default function Header() {
         <Styled.a
           as={Link}
           to="/"
-          sx={{ textDecoration: "none", color: "text" }}
+          sx={{ color: "text", textDecoration: "none" }}
         >
           {data.site.siteMetadata.title}
         </Styled.a>
@@ -70,7 +70,11 @@ export default function Header() {
             >
               {data.site.siteMetadata.navItems.map(({ slug, name }, index) => (
                 <li key={index}>
-                  <Styled.a as={Link} to={slug}>
+                  <Styled.a
+                    as={Link}
+                    to={slug}
+                    sx={{ color: "text", textDecoration: "none" }}
+                  >
                     {name}
                   </Styled.a>
                 </li>

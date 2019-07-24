@@ -8,7 +8,15 @@ import SEO from "./SEO"
 import AnimatedContent from "./AnimatedContent"
 import PageTitle from "./PageTitle"
 
-export default function Layout({ children, pageContext }) {
+export default function Layout(props) {
+  const { children, pageContext } = props
+  let { title, description } = props
+
+  if (pageContext && pageContext.frontmatter) {
+    title = pageContext.frontmatter.title
+    description = pageContext.frontmatter.description
+  }
+
   return (
     <Styled.root>
       <Global
@@ -19,21 +27,19 @@ export default function Layout({ children, pageContext }) {
           },
         }}
       />
+      <SEO title={title} description={description} />
       <Header />
-      <AnimatedContent>
-        <Main>
-          <Container sx={{ py: 0 }}>
-            {pageContext && pageContext.frontmatter && (
-              <div>
-                <PageTitle title={pageContext.frontmatter.title} />
-                <SEO {...pageContext.frontmatter} />
-              </div>
-            )}
-            {children}
-          </Container>
-        </Main>
-        <Footer sx={{ py: 5 }}>Hello</Footer>
-      </AnimatedContent>
+      <Main>
+        <Container>
+          <AnimatedContent
+            sx={{ display: "flex", flexDirection: "column", flex: 1 }}
+          >
+            <PageTitle title={title} description={description} />
+          </AnimatedContent>
+          <AnimatedContent delay={200}>{children}</AnimatedContent>
+        </Container>
+      </Main>
+      <Footer>Hello</Footer>
     </Styled.root>
   )
 }

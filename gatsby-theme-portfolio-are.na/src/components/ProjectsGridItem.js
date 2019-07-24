@@ -7,17 +7,18 @@ export default function ProjectsGridItem({ item }) {
   return (
     <article>
       {item.children.slice(0, 1).map((block, index) => (
-        <Link to={`/${item.slug}`} key={index}>
+        <Styled.a as={Link} to={`/${item.slug}`} key={index}>
           {block.image && <Img fluid={block.image.childImageSharp.fluid} />}
-        </Link>
+        </Styled.a>
       ))}
-      <Styled.h3 sx={{ mb: 1 }}>
-        <Link
-          sx={{ color: "primary", textDecoration: "none" }}
+      <Styled.h3 sx={{ mb: 2 }}>
+        <Styled.a
+          as={Link}
           to={`/${item.slug}`}
+          sx={{ textDecoration: "none" }}
         >
           {item.title}
-        </Link>
+        </Styled.a>
       </Styled.h3>
       <Styled.p sx={{ mt: 0 }}>{item.metadata.description}</Styled.p>
     </article>

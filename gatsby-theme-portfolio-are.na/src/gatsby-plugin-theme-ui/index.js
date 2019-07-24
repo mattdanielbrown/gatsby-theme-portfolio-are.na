@@ -19,18 +19,14 @@ export default {
     secondary: "#119",
     muted: "#f6f6f6",
     highlight: "#ffffcc",
-    gray: "#777",
-    purple: "#609",
     modes: {
       dark: {
         text: "#fff",
         background: "#060606",
-        primary: "#3cf",
-        secondary: "#e0f",
+        primary: "#e0f",
+        secondary: "#8dff00",
         muted: "#191919",
         highlight: "#ffffcc",
-        gray: "#999",
-        purple: "#c0f",
       },
     },
   },
@@ -65,17 +61,24 @@ export default {
     Header: {
       pt: 3,
     },
+    Main: {
+      flex: 1,
+    },
     Footer: {
-      py: 4,
+      py: 5,
       mt: 4,
     },
     root: {
       fontFamily: "body",
       lineHeight: "body",
       fontWeight: "body",
+      minHeight: "100vh",
+      display: "flex",
+      flexDirection: "column",
     },
     h1: {
       variant: "textStyles.display",
+      fontSize: 6,
     },
     h2: {
       variant: "textStyles.heading",
@@ -102,33 +105,6 @@ export default {
       "&:hover, &:focus": {
         color: "secondary",
       },
-    },
-    pre: {
-      variant: "prism",
-      fontFamily: "monospace",
-      fontSize: 1,
-      p: 3,
-      color: "text",
-      bg: "muted",
-      overflow: "auto",
-      code: {
-        color: "inherit",
-      },
-    },
-    code: {
-      fontFamily: "monospace",
-      color: "secondary",
-      fontSize: 1,
-    },
-    inlineCode: {
-      fontFamily: "monospace",
-      color: "secondary",
-      bg: "muted",
-    },
-    hr: {
-      border: 0,
-      borderBottom: "1px solid",
-      borderColor: "muted",
     },
   },
 }

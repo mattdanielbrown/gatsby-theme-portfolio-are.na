@@ -5,7 +5,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import ProjectsGrid from "../components/ProjectsGrid"
-import PageTitle from "../components/PageTitle"
 
 export default function HomePage(props) {
   const data = useStaticQuery(graphql`
@@ -22,11 +21,7 @@ export default function HomePage(props) {
   const { indexTitle, indexDescription } = data.site.siteMetadata
 
   return (
-    <Layout>
-      <SEO description={indexTitle} />
-      {indexDescription && (
-        <PageTitle title={indexTitle} description={indexDescription} />
-      )}
+    <Layout title={indexTitle} description={indexDescription}>
       <ProjectsGrid />
     </Layout>
   )

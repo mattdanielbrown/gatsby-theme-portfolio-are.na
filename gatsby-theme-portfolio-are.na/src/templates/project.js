@@ -1,11 +1,10 @@
 /** @jsx jsx **/
 import { jsx, Styled } from "theme-ui"
 import Img from "gatsby-image"
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
 import { graphql } from "gatsby"
+
+import Layout from "../components/Layout"
 import ProjectsGrid from "../components/ProjectsGrid"
-import PageTitle from "../components/PageTitle"
 
 export default function ProjectTemplate(props) {
   const {
@@ -14,9 +13,7 @@ export default function ProjectTemplate(props) {
     children,
   } = props.data.arenaInnerChannel
   return (
-    <Layout>
-      <SEO title={title} description={description} />
-      <PageTitle title={title} description={description} />
+    <Layout title={title} description={description}>
       <section sx={{ display: "grid", gridAutoFlow: "row", gridGap: 4 }}>
         {children
           .filter(item => item.__typename === "ArenaBlock")
