@@ -1,51 +1,84 @@
-# Gatsby Theme Jam Example Submission
+# Gatsby Theme Portfolio Are.na
 
-This is a bare-bones Gatsby theme to showcase how a [Theme Jam](https://themejam.gatsbyjs.org) submission should look.
+A Gatsby theme for creating a portfolio with [are.na](https://are.na/)
 
-See the [live demo](https://gatsby-theme-jam-example.netlify.com)
+**[View Live Demo](https://gatsby-theme-portfolio-arena.netlify.com/)**
 
-## Installation
+## Features
 
-To use this theme in your Gatsby sites, follow these instructions:
+- [are.na](https://are.na/) for hosting of projects
+- [Theme UI](https://theme-ui.com) for styling
+- [MDX](https://mdxjs.com/) for static pages (`/about`, `/contact`) etc
+- [Gatsby Image](https://www.gatsbyjs.org/packages/gatsby-image/) for optimised images
+- [React Spring](https://github.com/react-spring/react-spring) for simple page transitions
 
-1.  Install the theme
-    ```sh
-    npm install --save gatsby-theme-jam-example
-    ```
+## Getting started
 
-2.  Add the theme to your `gatsby-config.js`:
-    ```js
-    module.exports = {
-      plugins: [
-        'gatsby-theme-jam-example'
-      ]
-    }
-    ```
+### 1. Generate a personal access token
 
-3.  Start your site
-    ```sh
-    gatsby develop
-    ```
+You will first need to generate an access token from [dev.are.na](https://dev.are.na/).
 
-## Submission Checklist
+### 2. Edit your `gatsby-config.js`
 
-To ensure your Theme Jam submission [follows the rules](https://themejam.gatsbyjs.org/rules), use this checklist:
+Add `gatsby-theme-portfolio-are.na` to your `plugins` in `gatsby-config.js`.
 
-- [ ] Use our [accessibility guide][a11y] to ensure your site meets our accessibility standards
-- [ ] Run a performance audit using [Lighthouse][] and/or [WebPageTest][]
-- [ ] Set up a live demo using [Netlify][] or [GitHub Pages][]
-- [ ] Add installation documentation to the README
-- [ ] Update the `name` field in `package.json`
-- [ ] Update the `author` field in `package.json`
-- [ ] Update the `repository` field in `package.json`
-- [ ] Make sure the theme’s `keywords` in `package.json` include `gatsby`, `gatsby-theme`, and `gatsby-plugin`
-- [ ] Publish your theme to npm ([docs][npmpublish])
-- [ ] Submit your theme at https://themejam.gatsbyjs.org
+Note: You will need to substitute out `YOUR_PERSONAL_ACCESS_TOKEN` and `SLUG_OF_ARENA_CHANNEL`.
 
-[a11y]: https://gatsbyjs.org/docs/making-your-site-accessible#how-to-improve-accessibility
-[Lighthouse]: https://developers.google.com/web/tools/lighthouse/
-[axe]: https://www.deque.com/axe/
-[WebPageTest]: http://webpagetest.org/
-[Netlify]: https://netlify.com
-[GitHub Pages]: https://pages.github.com/
-[npmpublish]: https://docs.npmjs.com/cli/publish
+```
+module.exports = {
+  siteMetadata: {
+    indexTitle: "A Gatsby theme for creating a portfolio with are.na",
+    indexDescription: "Gatsby + Are.na + Theme UI + MDX",
+    social: [
+      {
+        name: "Github",
+        url: "https://github.com",
+      },
+    ],
+    navItems: [
+      {
+        name: "Contact",
+        slug: "/contact",
+      },
+    ],
+  },
+  plugins: [
+    {
+      resolve: "gatsby-theme-portfolio-are.na",
+      options: {
+        accessToken: YOUR_PERSONAL_ACCESS_TOKEN,
+        channelSlug: SLUG_OF_ARENA_CHANNEL,
+      },
+    },
+  ],
+}
+
+```
+
+## Customising
+
+### Shadow Components
+
+All of the files below are available for customising through shadow components.
+
+#### `AnimatedContent.js`
+
+#### `Button.js`
+
+#### `Footer.js`
+
+#### `Header.js`
+
+#### `Layout.js`
+
+#### `PageTitle.js`
+
+#### `ProjectsGrid.js`
+
+#### `ProjectsGridItem.js`
+
+#### `SEO.js`
+
+### Theme UI
+
+You can style most of the theme by shadowing `theme-ui`.

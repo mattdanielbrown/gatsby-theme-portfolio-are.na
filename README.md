@@ -2,12 +2,83 @@
 
 A Gatsby theme for creating a portfolio with [are.na](https://are.na/)
 
-**[Demo](https://gatsby-theme-portfolio-arena.netlify.com/)**
+**[View Live Demo](https://gatsby-theme-portfolio-arena.netlify.com/)**
 
 ## Features
 
-- [are.na] for hosting of projects
+- [are.na](https://are.na/) for hosting of projects
 - [Theme UI](https://theme-ui.com) for styling
-- MDX for static pages (`/about`, `/contact`) etc
-- [gatsby-image]() for optimised images
+- [MDX](https://mdxjs.com/) for static pages (`/about`, `/contact`) etc
+- [Gatsby Image](https://www.gatsbyjs.org/packages/gatsby-image/) for optimised images
 - [React Spring](https://github.com/react-spring/react-spring) for simple page transitions
+
+## Getting started
+
+### 1. Generate a personal access token
+
+You will first need to generate an access token from [dev.are.na](https://dev.are.na/).
+
+### 2. Edit your `gatsby-config.js`
+
+Add `gatsby-theme-portfolio-are.na` to your `plugins` in `gatsby-config.js`.
+
+Note: You will need to substitute out `YOUR_PERSONAL_ACCESS_TOKEN` and `SLUG_OF_ARENA_CHANNEL`.
+
+```
+module.exports = {
+  siteMetadata: {
+    indexTitle: "A Gatsby theme for creating a portfolio with are.na",
+    indexDescription: "Gatsby + Are.na + Theme UI + MDX",
+    social: [
+      {
+        name: "Github",
+        url: "https://github.com",
+      },
+    ],
+    navItems: [
+      {
+        name: "Contact",
+        slug: "/contact",
+      },
+    ],
+  },
+  plugins: [
+    {
+      resolve: "gatsby-theme-portfolio-are.na",
+      options: {
+        accessToken: YOUR_PERSONAL_ACCESS_TOKEN,
+        channelSlug: SLUG_OF_ARENA_CHANNEL,
+      },
+    },
+  ],
+}
+
+```
+
+## Customising
+
+### Shadow Components
+
+All of the files below are available for customising through shadow components.
+
+#### `AnimatedContent.js`
+
+#### `Button.js`
+
+#### `Footer.js`
+
+#### `Header.js`
+
+#### `Layout.js`
+
+#### `PageTitle.js`
+
+#### `ProjectsGrid.js`
+
+#### `ProjectsGridItem.js`
+
+#### `SEO.js`
+
+### Theme UI
+
+You can style most of the theme by shadowing `theme-ui`.
