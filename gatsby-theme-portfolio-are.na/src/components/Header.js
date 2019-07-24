@@ -6,15 +6,15 @@ import {
   Styled,
   Container,
   useThemeUI,
-} from "theme-ui"
-import { graphql, useStaticQuery, Link } from "gatsby"
-import Button from "./Button"
+} from 'theme-ui'
+import { graphql, useStaticQuery, Link } from 'gatsby'
+import Button from './Button'
 
 export default function Header() {
   const [mode, setMode] = useColorMode()
   const { theme } = useThemeUI()
 
-  const modes = ["light", ...Object.keys(theme.colors.modes)]
+  const modes = ['light', ...Object.keys(theme.colors.modes)]
 
   const data = useStaticQuery(graphql`
     query {
@@ -38,22 +38,22 @@ export default function Header() {
     <ThemedHeader>
       <Container
         sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
         }}
       >
         <Styled.a
           as={Link}
           to="/"
-          sx={{ color: "text", textDecoration: "none" }}
+          sx={{ color: 'text', textDecoration: 'none' }}
         >
           {data.site.siteMetadata.title}
         </Styled.a>
         <div
           sx={{
-            display: "flex",
-            alignItems: "center",
+            display: 'flex',
+            alignItems: 'center',
             mr: 4,
           }}
         >
@@ -62,9 +62,9 @@ export default function Header() {
               sx={{
                 margin: 0,
                 padding: 0,
-                listStyle: "none",
-                display: "grid",
-                gridAutoFlow: "column",
+                listStyle: 'none',
+                display: 'grid',
+                gridAutoFlow: 'column',
                 gridGap: 3,
               }}
             >
@@ -73,7 +73,7 @@ export default function Header() {
                   <Styled.a
                     as={Link}
                     to={slug}
-                    sx={{ color: "text", textDecoration: "none" }}
+                    sx={{ color: 'text', textDecoration: 'none' }}
                   >
                     {name}
                   </Styled.a>

@@ -1,8 +1,8 @@
 /** @jsx jsx **/
-import { jsx } from "theme-ui"
-import { useStaticQuery, graphql } from "gatsby"
+import { jsx } from 'theme-ui'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import ProjectsGridItem from "./ProjectsGridItem"
+import ProjectsGridItem from './ProjectsGridItem'
 
 export default function ProjectsGrid() {
   const data = useStaticQuery(graphql`
@@ -45,14 +45,14 @@ export default function ProjectsGrid() {
   `)
 
   const projects = data.allArenaChannel.edges[0].node.children.filter(
-    item => item.__typename === "ArenaInnerChannel"
+    item => item.__typename === 'ArenaInnerChannel'
   )
 
   return (
     <section
       sx={{
-        display: "grid",
-        gridTemplateColumns: "repeat(2, 1fr)",
+        display: 'grid',
+        gridTemplateColumns: 'repeat(2, 1fr)',
         gridColumnGap: 4,
         gridRowGap: 4,
       }}

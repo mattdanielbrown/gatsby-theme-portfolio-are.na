@@ -22,7 +22,7 @@ exports.createPages = ({ graphql, actions }) => {
     // Create all the pages
     result.data.allArenaChannel.edges.forEach(edge => {
       edge.node.children
-        .filter(item => item.__typename === "ArenaInnerChannel")
+        .filter(item => item.__typename === 'ArenaInnerChannel')
         .forEach(child => {
           createPage({
             path: `${child.slug}`,

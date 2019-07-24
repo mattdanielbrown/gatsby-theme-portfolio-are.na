@@ -1,7 +1,7 @@
 /** @jsx jsx **/
-import { jsx, Styled } from "theme-ui"
-import Link from "gatsby-link"
-import Img from "gatsby-image"
+import { jsx, Styled } from 'theme-ui'
+import Link from 'gatsby-link'
+import Img from 'gatsby-image'
 
 export default function ProjectsGridItem({ item }) {
   return (
@@ -15,7 +15,7 @@ export default function ProjectsGridItem({ item }) {
         <Styled.a
           as={Link}
           to={`/${item.slug}`}
-          sx={{ textDecoration: "none" }}
+          sx={{ textDecoration: 'none' }}
         >
           {item.title}
         </Styled.a>

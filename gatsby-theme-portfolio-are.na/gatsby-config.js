@@ -1,22 +1,22 @@
-const path = require("path")
+const path = require('path')
 
 module.exports = ({ accessToken, channelSlug }) => {
   return {
     siteMetadata: {
-      title: "gatsby-theme-portfolio-are.na",
+      title: 'gatsby-theme-portfolio-are.na',
     },
     plugins: [
       {
-        resolve: "gatsby-source-are.na",
+        resolve: 'gatsby-source-are.na',
         options: {
           accessToken,
           channelSlugs: [channelSlug],
         },
       },
-      "gatsby-plugin-theme-ui",
-      "gatsby-plugin-react-helmet",
-      "gatsby-plugin-sharp",
-      "gatsby-transformer-sharp",
+      'gatsby-plugin-theme-ui',
+      'gatsby-plugin-react-helmet',
+      'gatsby-plugin-sharp',
+      'gatsby-transformer-sharp',
       {
         resolve: `gatsby-plugin-mdx`,
         options: {
@@ -26,9 +26,9 @@ module.exports = ({ accessToken, channelSlug }) => {
         },
       },
       {
-        resolve: "gatsby-plugin-page-creator",
+        resolve: 'gatsby-plugin-page-creator',
         options: {
-          path: path.join(__dirname, "src", "pages"),
+          path: path.join(__dirname, 'src', 'pages'),
         },
       },
     ],

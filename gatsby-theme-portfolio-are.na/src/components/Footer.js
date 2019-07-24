@@ -1,6 +1,6 @@
 /** @jsx jsx **/
-import { jsx, Footer as ThemedFooter, Styled, Container } from "theme-ui"
-import { useStaticQuery, graphql } from "gatsby"
+import { jsx, Footer as ThemedFooter, Styled, Container } from 'theme-ui'
+import { useStaticQuery, graphql } from 'gatsby'
 
 export default function Footer() {
   const data = useStaticQuery(graphql`
@@ -19,8 +19,8 @@ export default function Footer() {
     <ThemedFooter>
       <Container
         sx={{
-          display: "flex",
-          justifyContent: "space-between",
+          display: 'flex',
+          justifyContent: 'space-between',
         }}
       >
         <nav>
@@ -28,9 +28,9 @@ export default function Footer() {
             sx={{
               margin: 0,
               padding: 0,
-              listStyle: "none",
-              display: "grid",
-              gridAutoFlow: "column",
+              listStyle: 'none',
+              display: 'grid',
+              gridAutoFlow: 'column',
               gridGap: 3,
             }}
           >

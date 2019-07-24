@@ -1,12 +1,12 @@
 /** @jsx jsx **/
-import { jsx, Styled, Main, Container } from "theme-ui"
-import { Global } from "@emotion/core"
+import { jsx, Styled, Main, Container } from 'theme-ui'
+import { Global } from '@emotion/core'
 
-import Header from "./Header"
-import Footer from "./Footer"
-import SEO from "./SEO"
-import AnimatedContent from "./AnimatedContent"
-import PageTitle from "./PageTitle"
+import Header from './Header'
+import Footer from './Footer'
+import SEO from './SEO'
+import AnimatedContent from './AnimatedContent'
+import PageTitle from './PageTitle'
 
 export default function Layout(props) {
   const { children, pageContext } = props
@@ -21,7 +21,7 @@ export default function Layout(props) {
     <Styled.root>
       <Global
         styles={{
-          "html, body": {
+          'html, body': {
             margin: 0,
             padding: 0,
           },
@@ -32,7 +32,7 @@ export default function Layout(props) {
       <Main>
         <Container>
           <AnimatedContent
-            sx={{ display: "flex", flexDirection: "column", flex: 1 }}
+            sx={{ display: 'flex', flexDirection: 'column', flex: 1 }}
           >
             <PageTitle title={title} description={description} />
           </AnimatedContent>
