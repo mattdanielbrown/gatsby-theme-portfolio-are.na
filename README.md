@@ -1,4 +1,4 @@
-# Gatsby Theme Portfolio Are.na
+# Gatsby Theme Portfolio are.na
 
 A Gatsby theme for creating a portfolio with [are.na](https://are.na/)
 
