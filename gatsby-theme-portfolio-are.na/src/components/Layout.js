@@ -4,9 +4,9 @@ import { Global } from '@emotion/core'
 
 import Header from './Header'
 import Footer from './Footer'
-// import SEO from './SEO'
 import AnimatedContent from './AnimatedContent'
 import PageTitle from './PageTitle'
+import SEO from './SEO'
 
 export default function Layout(props) {
   const { children, pageContext } = props
@@ -27,7 +27,9 @@ export default function Layout(props) {
           },
         }}
       />
-      {/* <SEO title={title} description={description} /> */}
+      {pageContext && pageContext.frontmatter && (
+        <SEO title={title} description={description} />
+      )}
       <Header />
       <Main>
         <Container>

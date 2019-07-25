@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import ProjectsGrid from '../components/ProjectsGrid'
+import SEO from '../components/SEO'
 
 export default function ProjectTemplate(props) {
   const {
@@ -14,6 +15,7 @@ export default function ProjectTemplate(props) {
   } = props.data.arenaInnerChannel
   return (
     <Layout title={title} description={description}>
+      <SEO title={title} description={description} />
       <section sx={{ display: 'grid', gridAutoFlow: 'row', gridGap: 4 }}>
         {children
           .filter(item => item.__typename === 'ArenaBlock')

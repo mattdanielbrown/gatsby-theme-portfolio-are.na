@@ -4,19 +4,18 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+let activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+
+require("dotenv").config({
+  path: `.env.${activeEnv}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "gatsby-theme-portfolio-are.na",
-    titleTemplate: "%s — Gatsby Theme Portfolio Are.na",
-    defaultTitle: "Gatsby Theme Portfolio Are.na",
-    url: "https://www.doe.com", // No trailing slash allowed!
-    image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
-    twitterUsername: "@jordanoverbye",
-
     indexTitle: "A Gatsby theme for creating a portfolio with are.na",
     indexDescription: "Gatsby + Are.na + Theme UI + MDX",
-    description: "Gatsby + Are.na + Theme UI + MDX",
-
     social: [
       {
         name: "Github",
@@ -43,8 +42,7 @@ module.exports = {
     {
       resolve: "gatsby-theme-portfolio-are.na",
       options: {
-        accessToken:
-          "2db187bcb9fe61545222381128aba06a72dfcf73a62c291e835f8e344c1d3881",
+        accessToken: process.env.ARENA_ACCESS_TOKEN,
         channelSlug: ["gatsby-source-arena-portfolio"],
       },
     },

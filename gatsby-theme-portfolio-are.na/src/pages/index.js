@@ -22,6 +22,7 @@ export default function HomePage(props) {
 
   return (
     <Layout title={indexTitle} description={indexDescription}>
+      <SEO description={indexTitle} />
       <ProjectsGrid />
     </Layout>
   )
