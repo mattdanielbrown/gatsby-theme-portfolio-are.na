@@ -36,11 +36,25 @@ my-awesome-arena-channel
     ...
 ```
 
-### 3. Edit your `gatsby-config.js`
+3. Add `gatsby-theme-portfolio-are.na` as a dependency to your project
 
-Add `gatsby-theme-portfolio-are.na` to your `plugins` in `gatsby-config.js`.
+```
+yarn add gatsby-theme-portfolio-are.na
+```
 
+or 
+
+```
+npm install --save gatsby-theme-portfolio-are.na
+```
+
+### 4. Edit your `gatsby-config.js`
+
+Add `gatsby-theme-portfolio-are.na` to your `plugins` in `gatsby-config.js` and update your `siteMetaData`.
+
+```
 Note: You will need to substitute out `YOUR_PERSONAL_ACCESS_TOKEN` and `SLUG_OF_ARENA_CHANNEL`.
+```
 
 ```
 module.exports = {
@@ -99,4 +113,4 @@ All of the files below are available for customising through shadow components.
 
 ### Theme UI
 
-You can style most of the theme by shadowing `theme-ui`.
+You can style the theme by shadowing `theme-ui`.
