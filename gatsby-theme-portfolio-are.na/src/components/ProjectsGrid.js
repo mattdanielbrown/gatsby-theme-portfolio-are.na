@@ -47,7 +47,7 @@ export default function ProjectsGrid() {
     <section
       sx={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
+        gridTemplateColumns: ['1fr', 'repeat(2, 1fr)'],
         gridColumnGap: 4,
         gridRowGap: 4,
       }}
