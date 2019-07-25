@@ -17,7 +17,8 @@ export default function Button(props) {
         bg: 'muted',
         border: 0,
         borderRadius: 2,
-        ':focus': {
+        cursor: 'pointer',
+        ':focus, &:hover': {
           outline: '2px solid',
         },
       }}
