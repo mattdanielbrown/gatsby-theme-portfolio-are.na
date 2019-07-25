@@ -6,6 +6,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import ProjectsGrid from '../components/ProjectsGrid'
 import SEO from '../components/SEO'
+import useImageBackgroundColor from '../hooks/useImageBackgroundColor'
 
 export default function ProjectTemplate(props) {
   const {
@@ -13,6 +14,8 @@ export default function ProjectTemplate(props) {
     metadata: { description },
     children,
   } = props.data.arenaInnerChannel
+  const backgroundImageColor = useImageBackgroundColor()
+
   return (
     <Layout title={title} description={description}>
       <SEO title={title} description={description} />
@@ -22,7 +25,10 @@ export default function ProjectTemplate(props) {
           .map((item, index) => {
             return (
               <div className="margin-bottom-s" key={index}>
-                <Img fluid={item.image.childImageSharp.fluid} />
+                <Img
+                  backgroundColor={backgroundImageColor}
+                  fluid={item.image.childImageSharp.fluid}
+                />
               </div>
             )
           })}
