@@ -16,6 +16,8 @@ module.exports = {
     title: "gatsby-theme-portfolio-are.na",
     indexTitle: "A Gatsby theme for creating a portfolio with are.na",
     indexDescription: "Gatsby + Are.na + Theme UI + MDX",
+    image: "/social.png", // path in static folder
+    twitterUsername: "@jordanoverbye",
     social: [
       {
         name: "Github",
