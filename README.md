@@ -1,6 +1,6 @@
 # gatsby-theme-portfolio-are.na
 
-A Gatsby theme for creating a portfolio with [are.na](https://are.na/)
+A Gatsby theme for creating a portfolio with [are.na](https://are.na/).
 
 **[View Live Demo](https://gatsby-theme-portfolio-arena.netlify.com/)**
 
@@ -36,7 +36,7 @@ my-awesome-arena-channel
     ...
 ```
 
-3. Add `gatsby-theme-portfolio-are.na` as a dependency to your project
+3. Install `gatsby-theme-portfolio-are.na` as a dependency to your project.
 
 ```
 yarn add gatsby-theme-portfolio-are.na
@@ -83,6 +83,27 @@ module.exports = {
 ```
 
 > Note: You will need to substitute out `YOUR_PERSONAL_ACCESS_TOKEN` and `SLUG_OF_ARENA_CHANNEL`.
+
+5. Adding non-project pages (`/about`, `/contact` etc)
+
+Simply create a `.mdx` file in the your `/src/pages/` directory. For example `/src/pages.contact.mdx` will create the `/contact` page. If you would like specific pages to show in the navigation, you can edit `navItems` in the `gatsby-config.js` (see previous step). 
+
+```
+/src/pages/contact.mdx
+
+---
+title: Contact
+description: How to contact me
+---
+
+<div>
+
+# Hello World
+
+</div>
+
+```
+
 
 ## Customising
 
