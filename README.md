@@ -91,7 +91,7 @@ Simply create a `.mdx` file in the your `/src/pages/` directory. For example `/s
 If you would like specific pages to show in the navigation, you can edit `navItems` in the `gatsby-config.js` (see previous step). 
 
 ```
-/src/pages/contact.mdx
+// /src/pages/contact.mdx
 
 ---
 title: Contact
