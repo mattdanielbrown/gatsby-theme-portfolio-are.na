@@ -84,9 +84,11 @@ module.exports = {
 
 > Note: You will need to substitute out `YOUR_PERSONAL_ACCESS_TOKEN` and `SLUG_OF_ARENA_CHANNEL`.
 
-5. Adding non-project pages (`/about`, `/contact` etc)
+### 5. Adding non-project pages (`/about`, `/contact` etc)
 
-Simply create a `.mdx` file in the your `/src/pages/` directory. For example `/src/pages.contact.mdx` will create the `/contact` page. If you would like specific pages to show in the navigation, you can edit `navItems` in the `gatsby-config.js` (see previous step). 
+Simply create a `.mdx` file in the your `/src/pages/` directory. For example `/src/pages/contact.mdx` will create the `/contact` page. 
+
+If you would like specific pages to show in the navigation, you can edit `navItems` in the `gatsby-config.js` (see previous step). 
 
 ```
 /src/pages/contact.mdx
