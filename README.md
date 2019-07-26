@@ -52,9 +52,7 @@ npm install --save gatsby-theme-portfolio-are.na
 
 Add `gatsby-theme-portfolio-are.na` to your `plugins` in `gatsby-config.js` and update your `siteMetaData`.
 
-```
-Note: You will need to substitute out `YOUR_PERSONAL_ACCESS_TOKEN` and `SLUG_OF_ARENA_CHANNEL`.
-```
+> Note: You will need to substitute out `YOUR_PERSONAL_ACCESS_TOKEN` and `SLUG_OF_ARENA_CHANNEL`.
 
 ```
 module.exports = {
