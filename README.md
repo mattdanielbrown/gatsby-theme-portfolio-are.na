@@ -135,4 +135,4 @@ All of the files below are available for customising through shadow components.
 
 ### Theme UI
 
-Because this theme uses [Theme UI](https://theme-ui.com), you can customise colours, spacing, fonts, colour modes by shadowing `gatsby-plugin-theme-ui`.
+Because this theme uses [Theme UI](https://theme-ui.com), you can customise colours, spacing, fonts, color modes, MDX styles and more by shadowing `gatsby-plugin-theme-ui`.
