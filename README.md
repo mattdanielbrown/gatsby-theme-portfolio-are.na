@@ -106,8 +106,10 @@ description: How to contact me
 
 ```
 
+## Customising through Component Shadowing
 
-## Customising
+You can override components from this theme using [Component Shadowing](https://www.gatsbyjs.org/blog/2019-04-29-component-shadowing/)
+
 
 ### Shadow Components
 
@@ -133,4 +135,4 @@ All of the files below are available for customising through shadow components.
 
 ### Theme UI
 
-You can style the theme by shadowing `theme-ui`.
+Because this theme uses [Theme UI](https://theme-ui.com), you can customise colours, spacing, fonts, colour modes by shadowing `gatsby-plugin-theme-ui`.
