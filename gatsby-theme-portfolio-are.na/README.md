@@ -1,5 +1,8 @@
 # gatsby-theme-portfolio-are.na
 
+![](https://img.shields.io/npm/l/gatsby-theme-portfolio-are.na)
+![](https://img.shields.io/npm/v/gatsby-theme-portfolio-are.na)
+
 A Gatsby theme for creating a portfolio with [are.na](https://are.na/).
 
 **[View Live Demo](https://gatsby-theme-portfolio-arena.netlify.com/)**
